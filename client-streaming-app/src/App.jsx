@@ -14,11 +14,11 @@ function App({ signOut, user }) {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={VideoCatalog} />
-          <Route exact path="/profile" component={UserProfile(user)} />
-          <Route exact path="/subscription" component={Subscription} />
-          <Route exact path="/watchlist" component={Watchlist} />
-          <Route exact path="/videos/:videoId" render={(props) => <VideoPlayer videoId={props.match.params.videoId} />} />
+          <Route exact path="/" render={() => <VideoCatalog user={user} />} />
+          <Route exact path="/profile" render={() => <UserProfile user={user} />} />
+          <Route exact path="/subscription" render={() => <Subscription user={user} />} />
+          <Route exact path="/watchlist" render={() => <Watchlist user={user} />} />
+          <Route exact path="/videos/:videoId" render={(props) => <VideoPlayer user={user} videoId={props.match.params.videoId} />} />
         </Switch>
       </Router>
     </div>

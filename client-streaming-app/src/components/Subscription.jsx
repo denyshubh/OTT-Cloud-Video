@@ -1,7 +1,7 @@
 import { API } from "aws-amplify";
 import { useState, useEffect } from 'react';
 
-export default function Subscription({loggedInUser}) {
+export default function Subscription({ user }) {
   const [subscription, setSubscription] = useState({});
   const [isEditing, setIsEditing] = useState(false);
   const [formValues, setFormValues] = useState({});
@@ -10,13 +10,13 @@ export default function Subscription({loggedInUser}) {
     async function fetchSubscription() {
       const subscriptionData = await API.get(
         "OTTPlatformAPI",
-        `/users/${loggedInUser.username}/subscription`
+        `/users/${user.username}/subscription`
       );
       setSubscription(subscriptionData);
       setFormValues(subscriptionData);
     }
     fetchSubscription();
-  }, []);
+  }, [user]);
 
   async function handleSave() {
     const updatedSubscription = await API.put(

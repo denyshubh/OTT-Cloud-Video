@@ -2,16 +2,20 @@ import { useState, useEffect } from 'react';
 import { API } from 'aws-amplify';
 import ReactPlayer from 'react-player';
 
-export default function VideoPlayer({ videoId }) {
+export default function VideoPlayer({ videoId, user }) {
   const [video, setVideo] = useState({});
 
   useEffect(() => {
     async function fetchVideo() {
-      const response = await API.get('OTTPlatformAPI', `/videos/${videoId}`);
+      const response = await API.get('OTTPlatformAPI', `/videos/${videoId}`, {
+        headers: {
+          Authorization: `Bearer ${user.signInUserSession.accessToken.jwtToken}`,
+        },
+      });
       setVideo(response);
     }
     fetchVideo();
-  }, [videoId]);
+  }, [videoId, user]);
 
   return (
     <div className="VideoPlayer">

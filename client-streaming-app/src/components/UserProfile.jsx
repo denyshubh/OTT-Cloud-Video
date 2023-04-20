@@ -1,25 +1,21 @@
 import { API } from 'aws-amplify';
 import { useState, useEffect } from 'react';
 
-export default function UserProfile(loggedInUser) {
-  const [user, setUser] = useState({});
+export default function UserProfile({ user }) {
+  const [userData, setUserData] = useState(user);
   const [isEditing, setIsEditing] = useState(false);
   const [formValues, setFormValues] = useState({});
 
   useEffect(() => {
-    async function fetchUser() {
-      const userData = await API.get('OTTPlatformAPI', `/users/${loggedInUser.username}`);
-      setUser(userData);
-      setFormValues(userData);
-    }
-    fetchUser();
-  }, []);
- 
+    setUserData(user);
+    setFormValues(user);
+  }, [user]);
+
   async function handleSave() {
-    const updatedUser = await API.put('OTTPlatformAPI', `/users/${user.id}`, {
+    const updatedUser = await API.put('OTTPlatformAPI', `/users/${userData.id}`, {
       body: formValues
     });
-    setUser(updatedUser);
+    setUserData(updatedUser);
     setIsEditing(false);
   }
  
@@ -46,8 +42,8 @@ export default function UserProfile(loggedInUser) {
       ) : (
         <>
           <h2>My Profile</h2>
-          <p><strong>Username:</strong> {user.username}</p>
-          <p><strong>Email:</strong> {user.email}</p>
+          <p><strong>Username:</strong> {userData.username}</p>
+          <p><strong>Email:</strong> {userData.email}</p>
           <button onClick={() => setIsEditing(true)}>Edit Profile</button>
         </>
       )}
