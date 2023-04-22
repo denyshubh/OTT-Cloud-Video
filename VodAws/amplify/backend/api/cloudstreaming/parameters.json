@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "cloudstreaming",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authcloudstreaming4bdb6937",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
