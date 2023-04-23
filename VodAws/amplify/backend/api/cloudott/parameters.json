@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "cloudott",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authcloudott64dc8815",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cloudott-prod-04552-authRole",
+      "UnauthRoleArn": "arn:aws:iam::762631247299:role/amplify-cloudott-prod-04552-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::762631247299:role/amplify-cloudott-prod-04552-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cloudott-prod-04552-deployment",
+      "UnauthRoleName": "amplify-cloudott-prod-04552-unauthRole",
+      "StackName": "amplify-cloudott-prod-04552",
+      "StackId": "arn:aws:cloudformation:us-east-1:762631247299:stack/amplify-cloudott-prod-04552/33688cf0-e170-11ed-b675-0e795bcc6ee5",
+      "AmplifyAppId": "d10h01tyjyrvkk"
+    },
+    "categories": {
+      "auth": {
+        "cloudott64dc8815": {}
+      },
+      "api": {
+        "cloudott": {}
+      }
+    }
+  }
+}
