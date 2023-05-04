@@ -11,11 +11,8 @@ In this project, we'll build you through the process of creating our own video s
 ### ScreenShots
 
 ![Sign In Page](https://raw.githubusercontent.com/denyshubh/images/main/ott/Screenshot%202023-04-26%20at%203.29.00%20PM.png)
-
 ![Video Player](https://raw.githubusercontent.com/denyshubh/images/main/ott/Screenshot%202023-04-26%20at%203.30.49%20PM.png)
-
-![Video Catalog](https://raw.githubusercontent.com/denyshubh/images/main/ott/Screenshot%202023-04-26%20at%203.30.00%20PM.png)
-
+![Videos Catalog Page](https://raw.githubusercontent.com/denyshubh/images/main/ott/Screenshot%202023-05-03%20at%2010.26.04%20PM.png)
 ![Video Upload](https://raw.githubusercontent.com/denyshubh/images/main/ott/Screenshot%202023-04-26%20at%203.30.15%20PM.png)
 ![Sign Up Page](https://raw.githubusercontent.com/denyshubh/images/main/ott/Screenshot%202023-04-26%20at%203.29.11%20PM.png)
 
